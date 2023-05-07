@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiv s Portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">Code<span id="js1">Js</span></div>
+                <ul id="sidemenu">
+                    <li><span class="hidden" onclick="closem()">X</span></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <span class="hidden meenu" onclick="openm()">M</span>
+            </nav>
+            <div class="header-text">
+                <p>Tech Enthusiast</p>
+                <h1>Hi! I am <span class="logo2">Shivam</span><br>Tiwari from Noida</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--about-->
+    <div id="about">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="css/me2.jpeg" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subt">About Me</h1>
+                <p>
+                    Hello My name is Shivam Tiwari I am a student of Electornics Engineering
+                    from Mnit Jaipur,Rajasthan.I am a curious student who actually belong from
+                    Noida , Uttar Pradesh . I tries to solve programming problem and make some intresting
+                    projects . I always try to become a better version of me .If you want some
+                    one to work with you for a project or internship then , I am the right whom you
+                    are looking for.. thats all from my side.
+                </p>
+                <div class="tabt">
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('project')">Projects</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tabc activet" id="skills">
+                    <ul>
+                        <li><span>UI?UX</span><br>Design web interface</li>
+                        <li><span>WEB Development</span><br>HTML , CSS ,Js</li>
+                        <li><span>Language</span><br>C, C++ , Python</li>
+                    </ul>
+                </div>
+                <div class="tabc" id="project">
+                    <ul>
+                        <li><span>Js Project1</span><br>It consist of Calc and game</li>
+                        <li><span>Js Project2</span><br>Timer , Clock, etc</li>
+                        <li><span>Guessing Game</span><br>It is a guess the number game</li>
+                    </ul>
+                </div>
+                <div class="tabc" id="education">
+                    <ul>
+                        <li><span>2022</span><br>Became a part of Mnit as Electronics Student</li>
+                        <li><span>2021</span><br>Passed in 12th standard with 93%</li>
+                        <li><span>2019</span><br>Passed 10th boared with 98%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----Services---->
+    <div id="services">
+        <div class="container">
+            <h1 class="subt">My Services</h1>
+            <div class="service-list">
+                <div>
+                    <h2>Web Designing</h2>
+                    <p>If you want someone to part in your web designing then I cam help you
+                        in that field .I have designed not many but enough number of website
+                        so that I can value add to your website.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>FrontEnd Engineer</h2>
+                    <p>
+                        I have made many frontend project and I have participated with my friend
+                        in many contest for frontend .Though , We don't get Selected but , we
+                        tried our best and I have experience that I got from those contest.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>ML Project</h2>
+                    <p>I have some basic knowlege about Machine Learning and I would try to take
+                        part in Ml project or any internship in field of Ml .As I have Practice
+                        of Python by heart I can contribute a lot for you.
+                    </p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!------contact------>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subt">Contact Me</h1>
+                    <p>@ shivamtiwariastudent@gmail.com</p>
+                    <p>+91 8700564629</p>
+                    <button class="btn" onclick="act1()">Download CV</button>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" id="msg" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn" onclick="submitted()">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="submitted hide" id="sub1">
+            Hope You have filled the form..
+        </div>
+        <div class="copyright">
+            <p>Copyright @ am_Shiv .Made by Shivam Tiwari</p>
+        </div>
+    </div>
+
+
+    <script>
+        const tablinks = document.getElementsByClassName("tab-links");
+        const tabcontent = document.getElementsByClassName("tabc");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("redline");
+            }
+
+            for (content of tabcontent) {
+                content.classList.remove("activet");
+            }
+
+            event.currentTarget.classList.add("redline");
+            document.getElementById(tabname).classList.add("activet");
+        }
+
+        function act1() {
+            alert("For Privacy reason we cannot give you CV ");
+            console.log("clicked");
+        }
+    </script>
+    <script>
+        const sidem = document.getElementById('sidemenu');
+
+
+        function openm() {
+            sidem.style.right="0";
+        }
+
+        function closem() {
+            sidem.style.right="-200px";
+        }
+
+        function submitted(){
+            document.getElementById('sub1').classList.remove('hide');
+        }
+    </script>
+</body>
+
+</html>
